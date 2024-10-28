@@ -9,21 +9,29 @@ export type User = {
   password: string;
 };
 
+export type Client = {
+  pkey: number;
+  first_name: string;
+  last_name: string;
+  zip_code:string;
+  town:string;
+  address:string;
+  type_entity: string;
+  phone_nb: string;
+  solar_edge_link:string;
+};
 export type Customer = {
   id: string;
   name: string;
   email: string;
   image_url: string;
 };
-
-export type Invoice = {
-  id: string;
-  customer_id: string;
-  amount: number;
-  date: string;
-  // In TypeScript, this is called a string union type.
-  // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
-  status: 'pending' | 'paid';
+export type Project = {
+  pkey_id: number;
+  latitude: number;
+  longitude: number;
+  power_kwc:number;
+  type_subsidy:string;
 };
 
 export type Revenue = {
